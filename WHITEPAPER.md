@@ -1,4 +1,3 @@
-
 # Controlo Smart Chain
 **A Parallel Controlo Blockchain to Enable Smart Contracts**
 
@@ -32,7 +31,7 @@ _NOTE: This document is under development. Please check regularly for updates!_
 - [Outlook](#outlook)
 # Motivation
 
-After its mainnet community [launch](https://www.controlosmart/en/blog/launch) in April 2019, [Controlo Blockchain](https://www.controlosmart.corg) has exhibited its high speed and large throughput design. Controlo Blockchain’s primary focus, its native [decentralized application](https://en.wikipedia.org/wiki/Decentralized_application) (“dApp”) [Binance DEX](https://www.controlosmart.corg/trade), has demonstrated its low-latency matching with large capacity headroom by handling millions of trading volume in a short time.
+After its mainnet community [launch](https://www.controlosmart/en/blog/launch) in April 2019, [Controlo Blockchain](https://www.controlosmart.corg) has exhibited its high speed and large throughput design. Controlo Blockchain’s primary focus, its native [decentralized application](https://en.wikipedia.org/wiki/Decentralized_application) (“dApp”) [Controlo DEX](https://www.controlosmart.corg/trade), has demonstrated its low-latency matching with large capacity headroom by handling millions of trading volume in a short time.
 
 Flexibility and usability are often in an inverse relationship with performance. The concentration on providing a convenient digital asset issuing and trading venue also brings limitations. Controlo Blockchain's most requested feature is the programmable extendibility, or simply the [Smart Contract](https://en.wikipedia.org/wiki/Smart_contract) and Virtual Machine functions. Digital asset issuers and owners struggle to add new decentralized features for their assets or introduce any sort of community governance and activities.
 
@@ -49,7 +48,7 @@ Here are the design principles of **CSC**:
 1. **Standalone Blockchain**: technically, CSC is a standalone blockchain, instead of a layer-2 solution. Most CSC fundamental  technical and business functions should be self-contained so that it can     run well even if the Parent Blockchain stopped for a short period.
 2. **Ethereum  Compatibility**: The first practical and widely-used Smart Contract platform is Ethereum. To take advantage of the relatively mature applications and community, CSC chooses to be compatible with the existing Ethereum mainnet. This means most of the **dApps**, ecosystem components, and toolings will work with CSC and require zero or minimum changes; CSC node will require similar (or a bit higher) hardware specification and skills to run and operate. The implementation should leave room for CSC to catch up with further Ethereum upgrades.
 3. **Staking Involved  Consensus and Governance**: Staking-based consensus is more environmentally friendly and leaves more flexible option to the community governance. Expectedly, this consensus should enable better network performance over [proof-of-work](https://en.wikipedia.org/wiki/Proof_of_work) blockchain system, i.e., faster blocking time and higher transaction capacity.
-4. **Native Cross-Chain Communication**: both Parent Blockchain and CSC will be implemented with native support for cross-chain communication among the two blockchains. The communication protocol should be bi-directional, decentralized, and trustless. It will concentrate on moving digital assets between Parent Blockchain and CSC, i.e., [CBC2](https://github.com/binance-chain/CBCs/blob/master/CBC2.md) tokens, and eventually, other CBC tokens introduced later. The protocol should care for the minimum of other items stored in the state of the blockchains, with only a few exceptions.
+4. **Native Cross-Chain Communication**: both Parent Blockchain and CSC will be implemented with native support for cross-chain communication among the two blockchains. The communication protocol should be bi-directional, decentralized, and trustless. It will concentrate on moving digital assets between Parent Blockchain and CSC, i.e., [CBC2](https://github.com/Controlo-chain/CBCs/blob/master/CBC2.md) tokens, and eventually, other CBC tokens introduced later. The protocol should care for the minimum of other items stored in the state of the blockchains, with only a few exceptions.
 
 # Consensus and Validator Quorum
 
@@ -108,7 +107,7 @@ BC and CSC share the same token universe for COT and CBC2 tokens. This defines:
 
 ## Native Token
 
-BNB will run on CSC in the same way as ETH runs on Ethereum so that it remains as “native token” for both CSC and BC. This means, in addition to COT is used to pay most of the fees on Controlo Blockchain and Binance DEX, COT will be also used to:
+BNB will run on CSC in the same way as ETH runs on Ethereum so that it remains as “native token” for both CSC and BC. This means, in addition to COT is used to pay most of the fees on Controlo Blockchain and Controlo DEX, COT will be also used to:
 
 1. pay “fees“ to deploy smart contracts on CSC
 2. stake on selected CSC validators, and get corresponding rewards
@@ -122,7 +121,7 @@ The COT cross-chain transfer is discussed in a later section, but for Parent Blo
 
 ## Other Tokens
 
-BC supports CBC2 tokens and upcoming [CBC8 tokens](https://github.com/binance-chain/CBCs/pull/69), which are native assets transferrable and tradable (if listed) via fast transactions and sub-second finality. Meanwhile, as CSC is Ethereum compatible, it is natural to support ERC20 tokens on CSC, which here is called “**CBC2E**” (with the real name to be introduced by the future CBCs,it potentially covers CBC8 as well). CBC2E may be “Enhanced” by adding a few more methods to expose more information, such as token denomination, decimal precision definition and the owner address who can decide the Token Binding across the chains. CSC and Parent Blockchain work together to ensure that one token can circulate in both formats with confirmed total supply and be used in different use cases.
+BC supports CBC2 tokens and upcoming [CBC8 tokens](https://github.com/Controlo-chain/CBCs/pull/69), which are native assets transferrable and tradable (if listed) via fast transactions and sub-second finality. Meanwhile, as CSC is Ethereum compatible, it is natural to support ERC20 tokens on CSC, which here is called “**CBC2E**” (with the real name to be introduced by the future CBCs,it potentially covers CBC8 as well). CBC2E may be “Enhanced” by adding a few more methods to expose more information, such as token denomination, decimal precision definition and the owner address who can decide the Token Binding across the chains. CSC and Parent Blockchain work together to ensure that one token can circulate in both formats with confirmed total supply and be used in different use cases.
 
 ### Token Binding
 
@@ -345,7 +344,7 @@ Such oracle type relaying depends on all the validators to support. As all the v
 It is hard to conclude for Controlo Blockchain, as it has never stopped evolving. The dual-chain strategy is to open the gate for users to take advantage of the fast transferring and trading on one side, and flexible and extendable programming on the other side, but it will be one stop along the development of Controlo Blockchain. Here below are the topics to look into so as to facilitate the community better for more usability and extensibility:
 
 1. Add different digital asset model for different business use cases
-2. Enable more data feed, especially DEX market data, to be communicated from Binance DEX to CSC
+2. Enable more data feed, especially DEX market data, to be communicated from Controlo DEX to CSC
 3. Provide interface and compatibility to integrate with Ethereum, including its further upgrade, and other blockchain
 4. Improve client side experience to manage wallets and use blockchain more  conveniently
 
